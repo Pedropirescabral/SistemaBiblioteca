@@ -1,0 +1,48 @@
+============================================================
+  SISTEMA DE BIBLIOTECA - ETAPA 4  |  INSTRUÇÕES DE USO
+============================================================
+
+--- 1. BANCO DE DADOS ---
+
+1. Abra o MySQL Workbench
+2. Execute o arquivo "banco.sql" (File > Open SQL Script...)
+3. Isso cria o banco "biblioteca" com tabelas e dados de teste
+
+--- 2. SENHA DO MYSQL ---
+
+Abra o arquivo:
+  src/sistemaBiblioteca/ConexaoDB.java
+
+Localize a linha:
+  private static final String SENHA = "";
+
+Altere para a sua senha do MySQL. Exemplo:
+  private static final String SENHA = "root";
+  ou
+  private static final String SENHA = "1234";
+
+--- 3. ADICIONAR O CONECTOR MYSQL NO NETBEANS ---
+
+O projeto precisa do driver JDBC do MySQL para funcionar.
+
+Opção A – via Libraries no NetBeans:
+  1. Clique com o botão direito em "Libraries" no projeto
+  2. Selecione "Add Library..."
+  3. Escolha "MySQL JDBC Driver" (se disponível)
+  4. Se não aparecer, clique em "Add JAR/Folder..."
+  5. Selecione o arquivo mysql-connector-j-*.jar
+     (baixe em: https://dev.mysql.com/downloads/connector/j/)
+
+Opção B – copiar JAR na pasta lib/:
+  1. Baixe o mysql-connector-j-8.x.x.jar
+  2. Cole-o dentro da pasta "lib/" do projeto
+  3. No NetBeans: botão direito em Libraries > Add JAR/Folder
+     e selecione o JAR dentro da pasta lib/
+
+--- 4. EXECUTAR ---
+
+Após configurar o banco e o conector:
+  - Abra o projeto no NetBeans (File > Open Project)
+  - Pressione F6 ou clique em Run
+
+============================================================
